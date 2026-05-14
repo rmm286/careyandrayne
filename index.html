@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Carey and Rayne — a personal site for stories, photos, and updates."
+    />
+    <title>Carey &amp; Rayne</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-brand" href="/">Carey &amp; Rayne</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#updates">Updates</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <p class="eyebrow">careyandrayne.com</p>
+          <h1 id="hero-title">Carey &amp; Rayne</h1>
+          <p class="lede">
+            A home for shared stories, favorite moments, and whatever comes next.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#about">Explore the site</a>
+            <a class="button button--ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container section__grid">
+          <div class="section__intro">
+            <p class="eyebrow">About</p>
+            <h2 id="about-title">Our story, in brief</h2>
+            <p>
+              This section will introduce who we are and what this site is for.
+              Replace this copy with your own narrative when you are ready.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Who we are</h3>
+              <p>Short bios or a shared introduction can live here.</p>
+            </article>
+            <article class="card">
+              <h3>What you will find</h3>
+              <p>Photos, notes, milestones, and other pages can be linked from here.</p>
+            </article>
+            <article class="card">
+              <h3>What is next</h3>
+              <p>Use this outline as a scaffold for future sections and imagery.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section section--muted" aria-labelledby="gallery-title">
+        <div class="container">
+          <div class="section__intro section__intro--center">
+            <p class="eyebrow">Gallery</p>
+            <h2 id="gallery-title">Images and moments</h2>
+            <p>
+              Drop photos into <code>assets/images/</code> and wire them into this
+              grid when you are ready.
+            </p>
+          </div>
+          <div class="media-grid" aria-label="Image gallery placeholders">
+            <figure class="media-placeholder">
+              <figcaption>Featured image</figcaption>
+            </figure>
+            <figure class="media-placeholder">
+              <figcaption>Gallery image</figcaption>
+            </figure>
+            <figure class="media-placeholder">
+              <figcaption>Gallery image</figcaption>
+            </figure>
+            <figure class="media-placeholder">
+              <figcaption>Gallery image</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="updates" class="section" aria-labelledby="updates-title">
+        <div class="container">
+          <div class="section__intro">
+            <p class="eyebrow">Updates</p>
+            <h2 id="updates-title">Recent notes</h2>
+            <p>
+              A simple feed of announcements, travel notes, or project updates can
+              replace these placeholders.
+            </p>
+          </div>
+          <div class="stack">
+            <article class="post">
+              <p class="post__meta">Month YYYY</p>
+              <h3>First update title</h3>
+              <p>Short summary for a future blog-style entry.</p>
+            </article>
+            <article class="post">
+              <p class="post__meta">Month YYYY</p>
+              <h3>Second update title</h3>
+              <p>Another placeholder entry to show how the list will read.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--accent" aria-labelledby="contact-title">
+        <div class="container section__grid section__grid--contact">
+          <div class="section__intro">
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Say hello</h2>
+            <p>
+              Add an email address, social links, or a contact form here when you
+              decide how you want people to reach you.
+            </p>
+          </div>
+          <div class="contact-panel">
+            <p class="contact-panel__label">Email</p>
+            <p><a href="mailto:hello@careyandrayne.com">hello@careyandrayne.com</a></p>
+            <p class="contact-panel__label">Social</p>
+            <ul class="link-list">
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>&copy; <span id="year"></span> Carey &amp; Rayne</p>
+        <p>Hosted on GitHub Pages at <a href="https://careyandrayne.com">careyandrayne.com</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>
