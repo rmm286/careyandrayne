@@ -93,7 +93,11 @@ body {
 }
 
 .invitation__line-wrap--2 {
-  animation-delay: 1.7s;
+  animation-delay: 1.55s;
+}
+
+.invitation__line-wrap--3 {
+  animation-delay: 1.9s;
 }
 
 .invitation__body {
@@ -111,7 +115,11 @@ body {
 }
 
 .invitation__line-wrap--2 .invitation__body {
-  animation-delay: 1s, 0.35s;
+  animation-delay: 0.9s, 0.2s;
+}
+
+.invitation__line-wrap--3 .invitation__body {
+  animation-delay: 1.15s, 0.45s;
 }
 
 .invitation__sign {
@@ -123,7 +131,7 @@ body {
   animation:
     invitation-line 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards,
     invitation-shimmer 5s ease-in-out 0.5s infinite;
-  animation-delay: 1.35s, 0.5s;
+  animation-delay: 1.5s, 0.6s;
 }
 
 @keyframes invitation-enter {
