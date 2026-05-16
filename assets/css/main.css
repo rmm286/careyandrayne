@@ -27,24 +27,195 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 
-.prompt {
+.invitation {
   position: absolute;
   top: 5rem;
   right: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  width: min(34rem, calc(100% - 4rem));
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  opacity: 0;
+  transform: translateY(1.5rem);
+  animation: invitation-enter 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+}
+
+.invitation__eyebrow,
+.invitation__body,
+.invitation__sign {
   margin: 0;
-  max-width: min(24rem, calc(100% - 4rem));
   font-family: "Fredoka", "Trebuchet MS", sans-serif;
-  font-size: clamp(2rem, 6vw, 3.25rem);
   font-weight: 600;
   letter-spacing: 0.03em;
-  line-height: 1.1;
+  line-height: 1.15;
   text-align: right;
-  background: linear-gradient(120deg, #ff4ecd 0%, #ff7b54 55%, #ffd24d 100%);
+  background: linear-gradient(
+    120deg,
+    #ff4ecd 0%,
+    #ff7b54 35%,
+    #ffd24d 65%,
+    #ff4ecd 100%
+  );
+  background-size: 220% 220%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 3px 10px rgba(255, 77, 157, 0.35));
+}
+
+.invitation__eyebrow {
+  font-size: clamp(1.85rem, 5.5vw, 2.75rem);
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(1rem);
+  animation:
+    invitation-line 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    invitation-shimmer 5s ease-in-out infinite;
+  animation-delay: 0.45s, 0s;
+}
+
+.invitation__line-wrap {
+  max-width: 100%;
+  animation: invitation-float 5s ease-in-out infinite;
+}
+
+.invitation__line-wrap--1 {
+  animation-delay: 1.35s;
+}
+
+.invitation__line-wrap--2 {
+  animation-delay: 1.7s;
+}
+
+.invitation__body {
+  font-size: clamp(1.75rem, 5.5vw, 3rem);
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(1rem);
+  animation:
+    invitation-line 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    invitation-shimmer 5s ease-in-out infinite;
+}
+
+.invitation__line-wrap--1 .invitation__body {
+  animation-delay: 0.7s, 0s;
+}
+
+.invitation__line-wrap--2 .invitation__body {
+  animation-delay: 1s, 0.35s;
+}
+
+.invitation__sign {
+  margin-top: 0.35rem;
+  font-size: clamp(1.5rem, 4.5vw, 2.25rem);
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(1rem);
+  animation:
+    invitation-line 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    invitation-shimmer 5s ease-in-out 0.5s infinite;
+  animation-delay: 1.35s, 0.5s;
+}
+
+@keyframes invitation-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes invitation-line {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes invitation-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes invitation-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.35rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .landing img {
+    flex: 0 0 auto;
+    width: 100%;
+    height: min(52dvh, 28rem);
+    min-height: 14rem;
+    object-fit: cover;
+    object-position: 28% 72%;
+  }
+
+  .invitation {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    align-self: center;
+    align-items: center;
+    width: min(34rem, calc(100% - 2rem));
+    margin: 1.25rem auto calc(1.5rem + env(safe-area-inset-bottom, 0px));
+    transform: translateY(1.25rem);
+  }
+
+  .invitation__eyebrow,
+  .invitation__body,
+  .invitation__sign {
+    text-align: center;
+  }
+
+  .invitation__body {
+    font-size: clamp(1.65rem, 6vw, 2.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .invitation,
+  .invitation__eyebrow,
+  .invitation__body,
+  .invitation__sign {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    background-size: 100% 100%;
+  }
+
+  .invitation__line-wrap {
+    animation: none;
+  }
 }
